@@ -122,3 +122,29 @@ a:focus, button:focus, input:focus, select:focus {
     left: auto;
     top: auto;
 }
+
+/* Media Query para pantallas grandes */
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
+    }
+
+    .header-content {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .header-content h1, .header-content p {
+        text-align: left;
+    }
+    
+    header {
+        text-align: left; 
+        padding: 2rem 5rem; 
+    }
+
+    .skills-list {
+        justify-content: center;
+    }
+}
