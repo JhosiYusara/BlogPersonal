@@ -148,3 +148,30 @@ a:focus, button:focus, input:focus, select:focus {
         justify-content: center;
     }
 }
+
+/* Estilos Generales */
+:root {
+    --primary-color: #346159;
+    --secondary-color: #c4dbdb;
+    --text-color: #333;
+    --background-color: #fff;
+    --accent-color: #ccc;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--background-color);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* ... Y así sucesivamente, reemplaza los colores en tu archivo con las variables. */
