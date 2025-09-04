@@ -160,7 +160,7 @@ ul li i {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    color: var(--primary-color);
+    color: #2c3e50;
 }
 .skills-list li:hover {
     transform: translateY(-4px) scale(1.02);
@@ -200,13 +200,13 @@ ul li i {
 }
 .education-item .institution, .experience-item .company {
     font-weight: 600;
-    color: var(--accent-color);
+    color: #07609c;
     margin-bottom: 5px;
     font-size: 1rem;
 }
 .education-item .dates, .experience-item .dates {
     font-style: italic;
-    color: var(--light-gray);
+    color: #586a6b;
     margin-bottom: 15px;
     display: block; 
 }
