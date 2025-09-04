@@ -1,192 +1,291 @@
-@charset "UTF-8";
+/* fuentes de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap');
+
 /* Estilos Generales */
 :root {
-  --primary-color: #346159;
-  --secondary-color: #c4dbdb;
-  --text-color: #333;
-  --background-color: #fff;
-  --accent-color: #ccc;
+    --primary-color: #2c3e50; 
+    --secondary-color: #ecf0f1; 
+    --text-color: #333333; 
+    --background-color: #ffffff; 
+    --accent-color: #3498db; 
+    --light-gray: #bdc3c7; 
 }
 
 body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: var(--secondary-color);
-  color: var(--text-color);
+    font-family: 'Lato', sans-serif; 
+    line-height: 1; 
+    margin: 0;
+    padding: 0;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 .container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
+    max-width: 960px; 
+    margin: auto;
+    padding: 0 20px; 
+    overflow: hidden;
+}
+
+/* Enlaces para accesibilidad */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+}
+.skip-link:focus {
+    position: static;
+    left: auto;
+    top: auto;
+    transform: translateY(10px); 
 }
 
 /* Encabezado */
 header {
-  background: var(--primary-color);
-  color: var(--background-color);
-  padding: 2rem 0;
-  text-align: center;
+    background: var(--primary-color);
+    color: var(--background-color);
+    padding: 2.5rem 0; 
+    text-align: center;
 }
-header .header-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem; 
 }
 header .avatar {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 3px solid var(--background-color);
-  margin-bottom: 1rem;
-  transition: transform 0.4s ease-in-out;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid var(--accent-color); 
+    object-fit: cover; /* Asegura que la imagen se vea bien */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    transition: transform 0.4s ease-in-out, border-color 0.4s ease-in-out;
 }
 header .avatar:hover {
-  transform: scale(1.05) rotate(5deg);
+    transform: scale(1.08) rotate(3deg); 
+    border-color: var(--background-color);
+}
+.header-text {
+    text-align: center;
 }
 header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; 
+    font-size: 2.4rem; 
+    font-weight: 600;
+    color: var(--background-color);
 }
 header p {
-  margin: 0;
-  font-size: 1.2rem;
+    margin: 0.5rem 0 1rem;
+    font-size: 1.3rem;
+    color: var(--light-gray);
 }
 
-.social-links {
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-.social-links a {
-  color: var(--background-color);
-  font-size: 2rem;
-  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-}
-.social-links a:hover {
-  color: #f0f0f0;
-  transform: scale(1.1);
-}
 
 /* Secciones de Contenido */
 main {
-  padding: 20px;
+    padding: 30px 0; /* Ajuste para el padding del contenedor */
 }
 
 section {
-  background: var(--background-color);
-  padding: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: var(--background-color);
+    padding: 10px; 
+    margin-bottom: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+section:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); 
 }
 section h2 {
-  color: #555;
-  border-bottom: 2px solid var(--accent-color);
-  padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color); 
+    border-bottom: 3px solid var(--accent-color); 
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    display: flex; 
+    align-items: center;
+    gap: 10px; 
+}
+.icon-heading {
+    color: var(--accent-color); 
 }
 
-/* Listas de Habilidades */
+/* Listas en general (para educación, experiencia) */
 ul {
-  list-style-type: none;
-  padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
-
 ul li {
-  background: var(--background-color);
-  padding: 10px;
-  margin-bottom: 5px;
-  border-left: 5px solid var(--text-color);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transición suave */
+    padding: 8px 0;
+    border-bottom: 1px dashed var(--light-gray); 
+    color: var(--text-color);
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-ul li:hover {
-  transform: translateY(-3px); /* Se eleva ligeramente */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra para efecto 3D */
-  border-left-color: var(--primary-color); /* Cambia el color del borde */
+ul li:last-child {
+    border-bottom: none; 
+}
+ul li i {
+    color: var(--accent-color); 
+    font-size: 1.1rem;
 }
 
+
+/* Estilos para Habilidades */
 .skills-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 15px; 
 }
 .skills-list li {
-  flex: 1 1 auto;
-  text-align: center;
-  border-radius: 5px;
+    background: var(--secondary-color); 
+    padding: 12px 15px;
+    text-align: center;
+    border-radius: 8px;
+    border-left: none; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--primary-color);
 }
+.skills-list li:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: var(--accent-color); 
+    color: var(--background-color);
+}
+.skills-list li i {
+    color: var(--primary-color); 
+    font-size: 1.2rem;
+    margin-right: 8px;
+}
+.skills-list li:hover i {
+    color: var(--background-color); 
+}
+
+/* Estilos para Educación y Experiencia (Tarjetas) */
+.education-item, .experience-item {
+    background-color: var(--background-color);
+    padding: 5px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid var(--accent-color); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.education-item:hover, .experience-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+.education-item h3, .experience-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+.education-item .institution, .experience-item .company {
+    font-weight: 600;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+    font-size: 1rem;
+}
+.education-item .dates, .experience-item .dates {
+    font-style: italic;
+    color: var(--light-gray);
+    margin-bottom: 15px;
+    display: block; 
+}
+.experience-item ul {
+    margin-top: 10px;
+    list-style-type: disc; 
+    margin-left: 20px;
+}
+.experience-item ul li {
+    border-bottom: none; 
+    padding: 3px 0;
+    list-style-type: disc; 
+    color: var(--text-color);
+    font-size: 0.8rem; 
+    line-height: 1.2;
+}
+.experience-item ul li i { 
+    color: var(--accent-color);
+    margin-right: 5px;
+}
+
 
 /* Pie de Página */
 footer {
-  text-align: center;
-  padding: 20px;
-  background: var(--primary-color);
-  color: var(--background-color);
-  margin-top: 20px;
-  text-decoration: none;
-  transition: color 0.3s ease-in-out; /* Transición suave */
-}
-footer:hover {
-  color: #f0f0f0; /* Color más claro al pasar el mouse */
-  text-decoration: underline;
+    text-align: center;
+    padding: 25px;
+    background: var(--primary-color);
+    color: var(--background-color);
+    margin-top: 30px;
+    font-size: 1.1rem;
 }
 footer a {
-  color: var(--background-color);
-  text-decoration: none;
+    color: var(--accent-color); 
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
 }
 footer a:hover {
-  text-decoration: underline;
-}
-
-a:focus, button:focus, input:focus, select:focus {
-  outline: 3px solid #007bff;
-  outline-offset: 2px;
-}
-
-.skip-link {
-  position: absolute;
-  left: -999px;
-}
-.skip-link:focus {
-  position: static;
-  left: auto;
-  top: auto;
+    color: var(--background-color);
+    text-decoration: underline;
 }
 
 /* Media Query para pantallas grandes */
 @media (min-width: 768px) {
-  .container {
-    width: 70%;
-  }
-  .header-content {
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-  }
-  .header-content h1, .header-content p {
-    text-align: left;
-  }
-  header {
-    text-align: left;
-    padding: 2rem 5rem;
-  }
-  .skills-list {
-    justify-content: center;
-  }
-}
-/* 3. Botón "Contenido principal" */
-.skip-link {
-  position: absolute;
-  left: -999px;
-  transition: transform 0.3s ease-in-out;
+    .header-content {
+        flex-direction: row; /* La imagen a la izquierda, texto a la derecha */
+        justify-content: center;
+        gap: 3rem; /* Más espacio entre imagen y texto */
+    }
+    .header-text {
+        text-align: left; 
+    }
+    header h1, header p {
+        text-align: left;
+    }
+    .skills-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Más ancho para habilidades */
+    }
 }
 
-.skip-link:focus {
-  position: static;
-  left: auto;
-  top: auto;
-  transform: translateY(10px); /* Se mueve hacia abajo */
-}/*# sourceMappingURL=styles.css.map */
+@media (max-width: 767px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    section {
+        padding: 20px;
+    }
+    section h2 {
+        font-size: 1.5rem;
+    }
+    .education-item, .experience-item {
+        padding: 20px;
+    }
+    .skills-list {
+        grid-template-columns: 1fr; 
+    }
+    .social-links {
+        gap: 1rem;
+    }
+}

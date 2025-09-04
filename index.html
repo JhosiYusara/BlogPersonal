@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jhoselin - Currículum </title>
-    <meta name="description" content="Mi curriculum, con información profesional y mis distintas habilidades.">
+    <title>Jhoselin - Currículum</title>
+    <meta name="description" content="Mi currículum, con información profesional y mis distintas habilidades.">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <script type="application/ld+json">
         {
@@ -14,57 +16,156 @@
         "name": "Jhoselin Yusara",
         "jobTitle": "Desarrolladora Web",
         "url": "https://JhosiYusara.github.io/BlogPersonal/",
-        "image": "img/perfil.png"
+        "image": "img/foto1.jpeg"
         }
 </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Contenido principal</a>
     <header role="banner">
-            <img src="img/perfil.png" alt="Jhosi Yusara" class="avatar" loading="lazy">
-            <h1>Jhoselin Yusara Limachi Quispe</h1>
-            <p>Técnico | Sistemas Informáticos</p>
+        <div class="header-content">
+            <img src="img/foto1.jpeg" alt="Jhosi Yusara" class="avatar" loading="lazy">
+            <div class="header-text">
+                <h1>Jhoselin Yusara Limachi Quispe</h1>
+                <p>Técnico | Sistemas Informáticos</p>
+            </div>
+        </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" class="container">
         <section class="summary" aria-labelledby="summary-heading">
-            <h2 id="summary-heading">Sobre Mí</h2>
-            <p>Soy Jhoselin, actualmente estoy titulada como técnico en Sistemas Informáticos y cursando el complementario de Ingenieria de Sistemas, con una visión a crecer mucho mas tanto en lo profesional como tambien en lo personal, vivo en la ciudad de cochabamba.</p>
+            <h2 id="summary-heading"><i class="fas fa-user-circle icon-heading"></i> Sobre Mí</h2>
+            <p>Hola soy Jhoselin, técnico en Sistemas Informáticos y estudiante de Ingeniería de Sistemas, tengo el enfoque especializado en aseguramiento de calidad (QA). Mi objetivo es garantizar la fiabilidad y el correcto funcionamiento de los sistemas a través de la revisión minuciosa y la implementación de procesos de prueba eficientes. Busco aplicar mi experiencia para asegurar que los productos superen las expectativas de calidad y ofrezcan una experiencia de usuario impecable.</p>
         </section>
 
         <section class="education" aria-labelledby="education-heading">
-            <h2 id="education-heading">Formación Académica</h2>
-            <ul>
-                <li><strong>Bachiller en Humanidades</strong> 
-                <li><strong>Técnico en Corte y Confección</strong> 
-                <li><strong>Técnico en Sistemas Informaticos</strong> 
-            </ul>
+            <h2 id="education-heading"><i class="fas fa-graduation-cap icon-heading"></i> Formación Académica</h2>
+            <div class="education-list">
+                <article class="education-item">
+                    <h3>Ingeniería de Sistemas</h3>
+                    <p class="institution">Universidad Adventista de Bolivia</p>
+                    <p class="dates">Actualmente cursando</p>
+                </article>
+                <article class="education-item">
+                    <h3>Técnico en Sistemas Informáticos</h3>
+                    <p class="institution">Instituto tecnológico "Teniente Armando de Palacios INCOS LA PAZ"</p>
+                    <p class="dates">Finalizado</p>
+                </article> 
+                <article class="education-item">
+                    <h3>Técnico en Corte y Confección</h3>
+                    <p class="institution">Colegio "Técnico Humanístico Eufrasio Ibáñez Rivero"</p>
+                    <p class="dates">Finalizado</p>
+                </article>
+                <article class="education-item">
+                    <h3>Bachiller en Humanidades</h3>
+                    <p class="institution">Colegio "Técnico Humanístico Eufrasio Ibáñez Rivero"</p>
+                    <p class="dates">Finalizado</p>
+                </article>
+            </div>
         </section>
         
         <section class="skills" aria-labelledby="skills-heading">
-            <h2 id="skills-heading">Habilidades</h2>
+            <h2 id="skills-heading"><i class="fas fa-tools icon-heading"></i> Habilidades</h2>
             <ul class="skills-list" aria-label="Lista de habilidades">
-                <li>HTML & CSS</li>
-                <li>SQL</li>
-                <li>Revisión y calidad de sistemas</li>
-                <li>Manejo de sistemas de facturación</li>
-                <li>Manejo de sistemas bancarios</li>
-                <li>Resolución de Problemas</li>
+                <li><i class="fab fa-html5"></i> HTML & CSS</li>
+                <li><i class="fas fa-database"></i> SQL e Informix</li>
+                <li><i class="fab fa-php"></i> PHP</li>
+                <li><i class="fas fa-project-diagram"></i> Gestión de proyectos</li>
+                <li><i class="fas fa-check-circle"></i> Revisión y calidad de sistemas</li>
+                <li><i class="fas fa-file-invoice-dollar"></i> Manejo de sistemas de facturación</li>
+                <li><i class="fas fa-money-check-alt"></i> Manejo de sistemas bancarios</li>
+                <li><i class="fas fa-lightbulb"></i> Resolución de Problemas</li>
+                <li><i class="fas fa-headset"></i> Atención al Cliente</li>
+                <li><i class="fas fa-boxes"></i> Control de inventarios</li>
             </ul>
         </section>
 
         <section class="experience" aria-labelledby="experience-heading">
-            <h2 id="experience-heading">Experiencia</h2>
-            <article class="project" aria-label="Detalles de experiencia laboral">
-                <h3>Analista Aseguramiento y calidad de sistemas</h3>
-                <p><strong>Descripción:</strong> Trabajo en una entidad financiera en el area de calidad de sistemas.</p>
-                <p> Realizo el trabajo de revisión y mantenimiento del core financiero de la institución, al iguañl que la implementación de nuevos sistemas que sean adquiridos por la institución</p>
+            <h2 id="experience-heading"><i class="fas fa-briefcase icon-heading"></i> Experiencia</h2>
+            
+            <article class="experience-item">
+                <h3>Soporte de proyectos y calidad de sistemas</h3>
+                <p class="company">Diaconía FRIF – IFD | Gerencia de Tecnología información y comunicación GTIC</p>
+                <p class="dates">Abril/2023 – A la fecha</p>
+                <ul>
+                    <li>Manejo de base de datos SQL e Informix</li>
+                    <li>Manejo sistema Netbank, SAI, SALAR</li>
+                    <li>Revisión y control de calidad aplicaciones móviles, banca electrónica y programas</li>
+                    <li>Revisión y control de calidad sistemas, actualización de sistemas y programas</li>
+                    <li>Validaciones manuales de distintos programas y datos</li>
+                    <li>Coordinación con las distintas áreas para la puesta en producción de proyectos</li>
+                    <li>Coordinación con proveedores externos (AXON, SALAR, Tesabiz)</li>
+                    <li>Coordinación y análisis de requerimientos de sistemas</li>
+                    <li>Capacitaciones al personal para el manejo de las distintas actualizaciones</li>
+                    <li>Conocimiento normativa ASFI</li>
+                    <li>Manejo de la herramienta JIRA</li>
+                </ul>
             </article>
+
+            <article class="experience-item">
+                <h3>Práctica pre profesional</h3>
+                <p class="company">Diaconía FRIF – IFD | Gerencia de Tecnología información y comunicación GTIC</p>
+                <p class="dates">Octubre/2022 – Marzo/2023</p>
+                <ul>
+                    <li>Manejo de base de datos</li>
+                    <li>Colaboración en Help Desk</li>
+                    <li>Realización de Backups diarios</li>
+                    <li>Manejo aplicativo Netbank</li>
+                    <li>Revisión y validación de programas</li>
+                    <li>Validaciones manuales de distintos programas y datos</li>
+                    <li>Colaboración a Gerencia y Subgerencia en distintos trabajos en relación con el área</li>
+                </ul>
+            </article>
+
+            <article class="experience-item">
+                <h3>Encargada de Ventas</h3>
+                <p class="company">Thiago Sport</p>
+                <p class="dates">Octubre/2021 – Enero/2022</p>
+                <ul>
+                    <li>Encargada de tienda de productos ortopédicos</li>
+                    <li>Ventas por mayor y menor</li>
+                    <li>Atención al cliente</li>
+                    <li>Inventarios</li>
+                </ul>
+            </article>
+
+            <article class="experience-item">
+                <h3>Niñera</h3>
+                <p class="company">Familia Merlo Limachi</p>
+                <p class="dates">Marzo/2021 – Septiembre/2021</p>
+                <ul>
+                    <li>Cuidado de bebe</li>
+                    <li>Colaboración en casa</li>
+                </ul>
+            </article>
+
+            <article class="experience-item">
+                <h3>Asistente de Ventas</h3>
+                <p class="company">Guti Sport</p>
+                <p class="dates">Diciembre/2019 – Enero/2020</p>
+                <ul>
+                    <li>Ventas de calzados deportivos</li>
+                    <li>Atención al cliente</li>
+                    <li>Inventarios</li>
+                </ul>
+            </article>
+
+            <article class="experience-item">
+                <h3>Práctica pre profesional</h3>
+                <p class="company">Ministerio de Defensa | Unidad de Movilización Territorial</p>
+                <p class="dates">Abril/2019 – Agosto/2019</p>
+                <ul>
+                    <li>Actualización de base de datos</li>
+                    <li>Mantenimiento de equipos</li>
+                    <li>Instalación y actualización de programas</li>
+                </ul>
+            </article>
+
         </section>
     </main>
 
     <footer>
-        <p>Contacto: <a href="mailto:ejemplo@google.com">jhoselin.cas03@gmail.com</a></p>
+        <p>Contacto: <a href="mailto:jhoselin.cas03@gmail.com">jhoselin.cas03@gmail.com</a></p>
     </footer>
 </body>
 </html>
