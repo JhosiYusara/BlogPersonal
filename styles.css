@@ -239,13 +239,13 @@ footer {
     font-size: 1.1rem;
 }
 footer a {
-    color: var(--accent-color); 
-    text-decoration: none;
+    color: #ffffff; 
+    text-decoration: underline;
     transition: color 0.3s ease-in-out;
 }
 footer a:hover {
-    color: var(--background-color);
-    text-decoration: underline;
+    color: var(--accent-color);
+    text-decoration: none;
 }
 
 /* Media Query para pantallas grandes */
